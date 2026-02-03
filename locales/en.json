@@ -1,0 +1,307 @@
+{
+  "meta": {
+    "title": "CryptoRefund | Professional Crypto Asset Recovery",
+    "description": "Professional cryptocurrency recovery services. We help victims of crypto fraud, exchange issues, and unauthorized transactions recover their assets."
+  },
+  "nav": {
+    "services": "Services",
+    "process": "Process",
+    "cases": "Cases",
+    "team": "Team",
+    "faq": "FAQ",
+    "freeConsultation": "Free Consultation",
+    "startRecovery": "Start Recovery"
+  },
+  "hero": {
+    "title": "Secure",
+    "titleHighlight": "Fund Recovery",
+    "description": "As the world's leading cryptocurrency platform in licensing, registration, and security certification, our commitment to clients is built on trust. We ensure data security, asset protection, and transparent refund procedures.",
+    "btnConsultation": "Free Consultation",
+    "btnLearnMore": "Learn More"
+  },
+  "stats": {
+    "fundsRecovered": "Funds Recovered",
+    "casesResolved": "Cases Resolved",
+    "successRate": "Success Rate"
+  },
+  "trustBar": {
+    "security": "Bank-Level Security",
+    "licensed": "Licensed & Regulated",
+    "global": "Global Coverage",
+    "fast": "Fast Response"
+  },
+  "contact": {
+    "title": "Start Your",
+    "titleHighlight": "Recovery",
+    "subtitle": "Get a free case evaluation from our expert team. No obligation, complete confidentiality.",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "John Smith",
+    "email": "Email Address",
+    "emailPlaceholder": "john@example.com",
+    "phone": "Phone Number",
+    "phonePlaceholder": "+1 234 567 8900",
+    "estimatedLoss": "Estimated Loss",
+    "selectRange": "Select range",
+    "under10k": "Under €10,000",
+    "10k50k": "€10,000 - €50,000",
+    "50k100k": "€50,000 - €100,000",
+    "100k500k": "€100,000 - €500,000",
+    "over500k": "Over €500,000",
+    "recoveryEstimate": "Estimated Recovery Rate",
+    "basedOnCases": "Based on similar cases we've handled",
+    "submitBtn": "Submit for Free Evaluation →"
+  },
+  "services": {
+    "title": "Comprehensive",
+    "titleHighlight": "Recovery Solutions",
+    "subtitle": "We specialize in recovering funds from various types of cryptocurrency fraud and platform issues.",
+    "exchange": {
+      "title": "Exchange Recovery",
+      "description": "Lost access to your exchange account? Funds frozen or locked? We work with exchanges and regulators to restore your access and recover your assets."
+    },
+    "scam": {
+      "title": "Scam Recovery",
+      "description": "Fallen victim to a crypto scam? Our team traces transactions, identifies perpetrators, and works to recover your stolen funds through legal channels."
+    },
+    "forex": {
+      "title": "Forex & Exchange Recovery",
+      "description": "Victim of forex fraud or trapped funds in a collapsed exchange? We recover assets from unregulated brokers and navigate bankruptcy proceedings."
+    },
+    "broker": {
+      "title": "Broker Recovery",
+      "description": "Lost money to an unlicensed broker? Our team traces funds and works with regulators to recover assets from fraudulent brokerage schemes."
+    },
+    "learnMore": "Learn More →"
+  },
+  "howItWorks": {
+    "title": "How",
+    "titleHighlight": "Recovery Works",
+    "subtitle": "Our proven 4-step process maximizes your chances of successful recovery.",
+    "step1": {
+      "title": "Free Consultation",
+      "description": "Share your case details with us. We'll evaluate your situation and explain your options at no cost."
+    },
+    "step2": {
+      "title": "Case Analysis",
+      "description": "Our experts analyze transactions, trace funds, and build a comprehensive recovery strategy."
+    },
+    "step3": {
+      "title": "Recovery Action",
+      "description": "We initiate recovery through exchanges, legal channels, and regulatory bodies worldwide."
+    },
+    "step4": {
+      "title": "Funds Returned",
+      "description": "Recovered assets are transferred directly to your wallet. You only pay on success."
+    }
+  },
+  "team": {
+    "title": "Meet the",
+    "titleHighlight": "Experts",
+    "subtitle": "Experienced professionals dedicated to recovering your assets.",
+    "kris": {
+      "name": "Kris Marszalek",
+      "role": "CEO & Co-Founder",
+      "bio": "Visionary leader with 15+ years building global technology companies and fintech platforms."
+    },
+    "rafael": {
+      "name": "Rafael Melo",
+      "role": "CFO & Co-Founder",
+      "bio": "Financial strategist with expertise in corporate finance and regulatory compliance worldwide."
+    },
+    "james": {
+      "name": "James Mitchell",
+      "role": "Legal Director",
+      "bio": "International finance lawyer specializing in crypto regulations across 30+ jurisdictions."
+    },
+    "sarah": {
+      "name": "Dr. Sarah Chen",
+      "role": "Head of Blockchain Analysis",
+      "bio": "PhD in Cryptography. Previously lead analyst at Chainalysis."
+    },
+    "michael": {
+      "name": "Michael Torres",
+      "role": "Senior Forensic Analyst",
+      "bio": "Expert in digital forensics with 10+ years tracing illicit cryptocurrency transactions."
+    },
+    "emma": {
+      "name": "Emma Williams",
+      "role": "Client Success Manager",
+      "bio": "Dedicated to keeping you informed every step of the recovery process."
+    }
+  },
+  "cases": {
+    "title": "Real",
+    "titleHighlight": "Recovery Stories",
+    "subtitle": "Detailed examples of how we've helped clients recover their assets.",
+    "recovered": "Recovered",
+    "days": "Days",
+    "case1": {
+      "tag": "Exchange Freeze",
+      "title": "Binance Account Unlocked After Wrongful Suspension",
+      "p1": "A German client had their Binance account frozen with €312,000 in assets after a routine security review flagged legitimate transactions as suspicious. Despite multiple appeals, the exchange refused to unlock the funds.",
+      "p2": "Our team prepared comprehensive documentation proving the legitimate source of funds, coordinated with Binance's compliance department through our industry contacts, and filed regulatory complaints with BaFin. The account was fully restored with all assets intact.",
+      "timeline1": "Case accepted",
+      "timeline2": "Documentation prepared",
+      "timeline3": "Compliance contacted",
+      "timeline4": "Funds released"
+    },
+    "case2": {
+      "tag": "Investment Scam",
+      "title": "Fake Trading Platform – Funds Traced and Recovered",
+      "p1": "A UK investor deposited £98,000 into what appeared to be a legitimate trading platform. After initial \"profits,\" all withdrawal requests were denied. The platform eventually went offline.",
+      "p2": "Using blockchain analysis, we traced the stolen funds through 23 wallets to a centralized exchange. We worked with law enforcement to freeze the assets and filed legal proceedings in Cyprus where the scammers operated. 85% of the original investment was recovered.",
+      "timeline1": "Blockchain traced",
+      "timeline2": "Exchange contacted",
+      "timeline3": "Legal action filed",
+      "timeline4": "85% recovered"
+    },
+    "case3": {
+      "tag": "Withdrawal Block",
+      "title": "KuCoin Bonus Lock – Terms Dispute Resolution",
+      "p1": "An Austrian trader's €78,000 balance was locked due to a bonus he didn't realize he accepted. The exchange demanded 50x trading volume before any withdrawal – an impossible €3.9 million in trades.",
+      "p2": "We negotiated directly with KuCoin's legal team, demonstrating that the bonus terms weren't clearly disclosed. After presenting evidence of misleading UI practices, the exchange agreed to forfeit the bonus and release the original deposit in full.",
+      "timeline1": "Terms analyzed",
+      "timeline2": "Evidence gathered",
+      "timeline3": "Negotiation",
+      "timeline4": "Full release"
+    },
+    "case4": {
+      "tag": "Forex Fraud",
+      "title": "Cyprus Forex Broker – Unlicensed Platform Shutdown",
+      "p1": "A French investor lost €215,000 to an unlicensed forex broker operating from Cyprus. The platform manipulated trades and refused all withdrawal requests, claiming \"bonus conditions\" weren't met.",
+      "p2": "We filed complaints with CySEC and coordinated with Cypriot authorities. Our legal team initiated civil proceedings and traced company assets. The broker's accounts were frozen and funds were recovered through court-ordered restitution.",
+      "timeline1": "Regulator notified",
+      "timeline2": "Assets traced",
+      "timeline3": "Legal action",
+      "timeline4": "Full recovery"
+    },
+    "case5": {
+      "tag": "Romance Scam",
+      "title": "Romance Scam OKX – Emotional Manipulation Recovery",
+      "p1": "A Dutch victim was manipulated through a dating app into investing €89,000 in what they believed was a legitimate crypto opportunity. The scammer used fake OKX interfaces to simulate trading gains.",
+      "p2": "Our forensic team traced the funds through multiple wallets to an exchange where the scammer attempted to cash out. Working with OKX's fraud department and Dutch law enforcement, we froze the funds and initiated recovery proceedings.",
+      "timeline1": "Funds traced",
+      "timeline2": "Exchange cooperation",
+      "timeline3": "Assets frozen",
+      "timeline4": "Funds returned"
+    },
+    "case6": {
+      "tag": "Exchange Collapse",
+      "title": "FTX Bankruptcy – Creditor Claims Navigation",
+      "p1": "A Swiss client had €156,000 trapped in FTX when the exchange collapsed. Navigating the complex bankruptcy proceedings seemed impossible without specialized legal knowledge.",
+      "p2": "Our team filed priority creditor claims, gathered all necessary documentation, and worked with the bankruptcy trustees. We successfully advocated for our client's position in the creditor hierarchy, securing a significantly higher recovery rate than average creditors.",
+      "timeline1": "Claims filed",
+      "timeline2": "Documentation",
+      "timeline3": "Creditor advocacy",
+      "timeline4": "Priority payout"
+    }
+  },
+  "certificates": {
+    "title": "Our",
+    "titleHighlight": "Certifications",
+    "subtitle": "Recognized excellence in cryptocurrency recovery services."
+  },
+  "faq": {
+    "title": "Frequently Asked",
+    "titleHighlight": "Questions",
+    "subtitle": "Everything you need to know about our recovery services.",
+    "q1": {
+      "question": "How do I know if my case is recoverable?",
+      "answer": "Every case is unique. We offer free consultations to evaluate your situation. Factors include the type of fraud, time elapsed, amount involved, and available documentation. Our success rate is 94% for cases we accept."
+    },
+    "q2": {
+      "question": "How long does the recovery process take?",
+      "answer": "Recovery timelines vary based on complexity. Simple exchange issues may resolve in 2-4 weeks, while complex fraud cases can take 2-6 months. We keep you informed throughout the entire process."
+    },
+    "q3": {
+      "question": "What are your fees?",
+      "answer": "We operate on a \"No Win, No Fee\" basis. You only pay a success fee when we recover your funds. The initial consultation is completely free. Fee percentages are discussed transparently before we begin."
+    },
+    "q4": {
+      "question": "What documents do I need?",
+      "answer": "Typically we need: transaction records, communication with the platform/scammer, wallet addresses involved, any contracts or agreements, and proof of identity. We'll guide you through exactly what's needed for your case."
+    },
+    "q5": {
+      "question": "Do you work internationally?",
+      "answer": "Yes, we operate globally. Our team has experience working with exchanges, regulators, and legal systems across Europe, North America, Asia, and beyond. Cryptocurrency fraud is borderless, and so is our recovery capability."
+    }
+  },
+  "partners": {
+    "title": "Trusted",
+    "titleHighlight": "& Verified By",
+    "ssl": {
+      "title": "SSL Secured",
+      "subtitle": "256-bit Encryption"
+    },
+    "gdpr": {
+      "title": "GDPR Compliant",
+      "subtitle": "Data Protection"
+    },
+    "fca": {
+      "title": "FCA Registered",
+      "subtitle": "UK Financial Authority"
+    },
+    "chainalysis": {
+      "title": "Chainalysis Partner",
+      "subtitle": "Blockchain Intelligence"
+    },
+    "trustpilot": {
+      "title": "Trustpilot",
+      "subtitle": "4.8/5 Rating"
+    }
+  },
+  "footer": {
+    "description": "Professional cryptocurrency recovery services. We help victims of crypto fraud and platform issues recover their digital assets through legal channels.",
+    "servicesTitle": "Services",
+    "exchangeRecovery": "Exchange Recovery",
+    "scamRecovery": "Scam Recovery",
+    "walletRecovery": "Wallet Recovery",
+    "legalSupport": "Legal Support",
+    "companyTitle": "Company",
+    "aboutUs": "About Us",
+    "howItWorks": "How It Works",
+    "successStories": "Success Stories",
+    "contactLink": "Contact",
+    "contactTitle": "Contact",
+    "liveChat": "Live Chat 24/7",
+    "copyright": "© 2025 CryptoRefund. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy"
+  },
+  "popup": {
+    "title": "Lost",
+    "titleHighlight": "Crypto?",
+    "description": "Don't wait! The sooner you act, the higher the chance of recovery. Get your free case evaluation now.",
+    "btn": "Free Consultation →",
+    "note": "✓ No obligation · ✓ 100% confidential"
+  },
+  "cookie": {
+    "text": "We use cookies to improve your experience and analyze site traffic. By continuing to use our site, you consent to our",
+    "privacyLink": "Privacy Policy",
+    "decline": "Decline",
+    "accept": "Accept All"
+  },
+  "leadPopup": {
+    "title": "Free Consultation",
+    "subtitle": "Submit your details and our recovery expert will contact you shortly.",
+    "namePlaceholder": "Your Name",
+    "phonePlaceholder": "Phone Number",
+    "emailPlaceholder": "Email Address",
+    "amountPlaceholder": "Estimated Loss Amount",
+    "consentCall": "I agree to receive a phone call for consultation",
+    "consentData": "I agree to the",
+    "privacyLink": "Privacy Policy",
+    "consentDataEnd": "and data processing",
+    "unavailableNotice": "Services temporarily unavailable for citizens of the following countries. We're working to resolve this:",
+    "submitBtn": "Request Free Consultation"
+  },
+  "getHelp": "Get Help",
+  "alerts": {
+    "thankYou": "Thank you! Our team will contact you shortly."
+  },
+  "langModal": {
+    "title": "Select Your Language",
+    "titleRu": "Выберите язык"
+  }
+}

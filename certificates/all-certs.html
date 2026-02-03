@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+  background: #0a0e17; 
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+.cert {
+  width: 450px;
+  height: 320px;
+  background: linear-gradient(135deg, #1a1f2e 0%, #0d1117 100%);
+  border: 3px solid;
+  border-image: linear-gradient(135deg, #d4af37, #f5d77a, #d4af37) 1;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  font-family: 'Georgia', serif;
+}
+.cert::before {
+  content: '';
+  position: absolute;
+  top: 8px; left: 8px; right: 8px; bottom: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  pointer-events: none;
+}
+.org {
+  color: #8b9dc3;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.title {
+  color: #d4af37;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  line-height: 1.2;
+}
+.awarded {
+  color: #6b7b9a;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.company {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+.bottom-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.seal {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d4af37;
+  font-size: 9px;
+  text-align: center;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+.year {
+  color: #d4af37;
+  font-size: 13px;
+  font-weight: bold;
+}
+.stars {
+  color: #d4af37;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+/* Silver variant */
+.cert.silver {
+  border-image: linear-gradient(135deg, #a8b4c4, #d4dde8, #a8b4c4) 1;
+}
+.cert.silver::before {
+  border-color: rgba(168, 180, 196, 0.3);
+}
+.cert.silver .title,
+.cert.silver .seal,
+.cert.silver .year,
+.cert.silver .stars {
+  color: #c0cad8;
+  text-shadow: 0 0 20px rgba(192, 202, 216, 0.3);
+}
+.cert.silver .seal {
+  border-color: #c0cad8;
+}
+</style>
+</head>
+<body>
+
+<!-- Certificate 1: Best Asset Recovery Firm -->
+<div class="cert" id="cert1">
+  <div class="org">European Financial Consumer Protection Association</div>
+  <div class="title">BEST ASSET<br>RECOVERY FIRM</div>
+  <div class="awarded">Awarded to</div>
+  <div class="company">Crypto.com Refund</div>
+  <div class="bottom-row">
+    <div class="seal">EFCPA<br>★<br>CERTIFIED</div>
+    <div class="year">2025</div>
+  </div>
+</div>
+
+<!-- Certificate 2: Excellence in Client Service -->
+<div class="cert silver" id="cert2">
+  <div class="org">International Dispute Resolution Council</div>
+  <div class="title">EXCELLENCE IN<br>CLIENT SERVICE</div>
+  <div class="awarded">Awarded to</div>
+  <div class="company">Crypto.com Refund</div>
+  <div class="bottom-row">
+    <div class="seal">IDRC<br>★<br>VERIFIED</div>
+    <div class="year">2025</div>
+  </div>
+</div>
+
+<!-- Certificate 3: Top Rated Recovery Service -->
+<div class="cert" id="cert3">
+  <div class="org">Consumer Choice Awards Europe</div>
+  <div class="title">TOP RATED<br>RECOVERY SERVICE</div>
+  <div class="stars">★★★★★</div>
+  <div class="company">Crypto.com Refund</div>
+  <div class="bottom-row">
+    <div class="seal">CCA<br>★<br>5 STARS</div>
+    <div class="year">2025</div>
+  </div>
+</div>
+
+<!-- Certificate 4: Certified Financial Recovery -->
+<div class="cert silver" id="cert4">
+  <div class="org">International Standards Organization</div>
+  <div class="title">CERTIFIED FINANCIAL<br>RECOVERY SPECIALIST</div>
+  <div class="awarded">ISO 27001 Compliant</div>
+  <div class="company">Crypto.com Refund</div>
+  <div class="bottom-row">
+    <div class="seal">ISO<br>27001<br>✓</div>
+    <div class="year">2025</div>
+  </div>
+</div>
+
+</body>
+</html>

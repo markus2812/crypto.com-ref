@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoRefund | Professional Crypto Asset Recovery</title>
+    <meta name="description" content="Professional cryptocurrency recovery services. We help victims of crypto fraud, exchange issues, and unauthorized transactions recover their assets.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- OG Tags -->
+    <meta property="og:title" content="CryptoRefund | Professional Crypto Asset Recovery">
+    <meta property="og:description" content="Lost crypto? We help recover funds from scams, frozen exchanges, and unauthorized transactions. Free consultation.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cryptorefund.com/og-image.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Global animated background -->
+    <div class="global-bg"></div>
+
+    <!-- Language Selection Modal -->
+    <div class="lang-modal-overlay" id="langModal">
+        <div class="lang-modal-content">
+            <div class="lang-modal-icon">🌍</div>
+            <h2 class="lang-modal-title" data-i18n="langModal.title">Select Your Language</h2>
+            <p class="lang-modal-subtitle" data-i18n="langModal.titleRu">Выберите язык</p>
+            <div class="lang-modal-options">
+                <div class="lang-option" onclick="i18n.setLanguage('en')">
+                    <img src="flags/gb.svg" class="flag" alt="EN">
+                    <span class="lang-name">English</span>
+                </div>
+                <div class="lang-option" onclick="i18n.setLanguage('ru')">
+                    <img src="flags/ru.svg" class="flag" alt="RU">
+                    <span class="lang-name">Русский</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" id="mobileNavClose">✕</button>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#how-it-works" data-i18n="nav.process">How It Works</a>
+        <a href="#case-studies" data-i18n="nav.cases">Case Studies</a>
+        <a href="#team" data-i18n="nav.team">Our Team</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="nav.startRecovery">Start Recovery</a>
+        <div class="mobile-lang-switcher">
+            <button class="lang-btn" id="mobileLangEn" onclick="i18n.setLanguage('en')">
+                <img src="flags/gb.svg" class="flag" alt="EN"> EN
+            </button>
+            <button class="lang-btn" id="mobileLangRu" onclick="i18n.setLanguage('ru')">
+                <img src="flags/ru.svg" class="flag" alt="RU"> RU
+            </button>
+        </div>
+    </div>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>🍪 <span data-i18n="cookie.text">We use cookies to improve your experience and analyze site traffic. By continuing to use our site, you consent to our</span> <a href="#" data-i18n="cookie.privacyLink">Privacy Policy</a>.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-btn-decline" id="cookieDecline" data-i18n="cookie.decline">Decline</button>
+                <button class="cookie-btn cookie-btn-accept" id="cookieAccept" data-i18n="cookie.accept">Accept All</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="crypto.com-logo.png" alt="Crypto.com Refund" class="logo-img">
+                <span class="logo-text"><span class="logo-white">Crypto.com</span> | <span class="logo-gradient">Refund</span></span>
+            </a>
+            <nav>
+                <a href="#services" data-i18n="nav.services">Services</a>
+                <a href="#how-it-works" data-i18n="nav.process">Process</a>
+                <a href="#case-studies" data-i18n="nav.cases">Cases</a>
+                <a href="#team" data-i18n="nav.team">Team</a>
+                <a href="#faq" data-i18n="nav.faq">FAQ</a>
+                <a href="javascript:void(0)" onclick="openLeadPopup()" class="btn btn-primary" data-i18n="nav.freeConsultation">Free Consultation</a>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" id="langSwitchEn" onclick="i18n.setLanguage('en')">
+                        <img src="flags/gb.svg" class="flag" alt="EN"> EN
+                    </button>
+                    <button class="lang-btn" id="langSwitchRu" onclick="i18n.setLanguage('ru')">
+                        <img src="flags/ru.svg" class="flag" alt="RU"> RU
+                    </button>
+                </div>
+            </nav>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-wrapper">
+            <div class="hero-text">
+                                <h1><span data-i18n="hero.title">Secure</span> <span class="gradient-text" data-i18n="hero.titleHighlight">Fund Recovery</span></h1>
+                <p class="hero-description" data-i18n="hero.description">As the world's leading cryptocurrency platform in licensing, registration, and security certification, our commitment to clients is built on trust. We ensure data security, asset protection, and transparent refund procedures.</p>
+
+                <div class="hero-buttons">
+                    <a href="javascript:void(0)" onclick="openLeadPopup()" class="btn btn-primary btn-large" data-i18n="hero.btnConsultation">Free Consultation</a>
+                    <a href="#how-it-works" class="btn btn-outline btn-large" data-i18n="hero.btnLearnMore">Learn More</a>
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+                <div class="pulsing-emblem">
+                    <img src="crypto-com-logo.webp" alt="Crypto.com">
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-value">€47M+</div>
+                <div class="stat-label" data-i18n="stats.fundsRecovered">Funds Recovered</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">3,200+</div>
+                <div class="stat-label" data-i18n="stats.casesResolved">Cases Resolved</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">94%</div>
+                <div class="stat-label" data-i18n="stats.successRate">Success Rate</div>
+            </div>
+        </div>
+
+
+        <div class="trust-bar">
+            <div class="trust-item"><svg class="trust-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="trustBar.security">Bank-Level Security</span></div>
+            <div class="trust-item"><svg class="trust-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="trustBar.licensed">Licensed & Regulated</span></div>
+            <div class="trust-item"><svg class="trust-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="trustBar.global">Global Coverage</span></div>
+            <div class="trust-item"><svg class="trust-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="trustBar.fast">Fast Response</span></div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section (moved up) -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <div class="cta-content animate-on-scroll">
+                <h2><span data-i18n="contact.title">Start Your</span> <span class="gradient-text" data-i18n="contact.titleHighlight">Recovery</span></h2>
+                <p data-i18n="contact.subtitle">Get a free case evaluation from our expert team. No obligation, complete confidentiality.</p>
+            </div>
+
+            <div class="cta-with-shield">
+                <div class="cta-form-wrapper">
+                <div class="contact-form animate-on-scroll">
+                    <form action="#" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" data-i18n="contact.fullName">Full Name</label>
+                                <input type="text" id="name" name="name" data-i18n-placeholder="contact.fullNamePlaceholder" placeholder="John Smith" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-i18n="contact.email">Email Address</label>
+                                <input type="email" id="email" name="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone" data-i18n="contact.phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" data-i18n-placeholder="contact.phonePlaceholder" placeholder="+1 234 567 8900">
+                            </div>
+                            <div class="form-group">
+                                <label for="amount"><span data-i18n="contact.estimatedLoss">Estimated Loss</span> 💰</label>
+                                <select id="amount" name="amount" onchange="updateRecoveryEstimate(this.value)">
+                                    <option value="" data-i18n="contact.selectRange">Select range</option>
+                                    <option value="under-10k" data-rate="92-96" data-i18n="contact.under10k">Under €10,000</option>
+                                    <option value="10k-50k" data-rate="89-94" data-i18n="contact.10k50k">€10,000 - €50,000</option>
+                                    <option value="50k-100k" data-rate="85-92" data-i18n="contact.50k100k">€50,000 - €100,000</option>
+                                    <option value="100k-500k" data-rate="82-90" data-i18n="contact.100k500k">€100,000 - €500,000</option>
+                                    <option value="over-500k" data-rate="78-88" data-i18n="contact.over500k">Over €500,000</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Recovery Estimate Calculator -->
+                        <div class="recovery-estimate" id="recoveryEstimate">
+                            <p data-i18n="contact.recoveryEstimate">Estimated Recovery Rate</p>
+                            <div class="rate" id="recoveryRate">85-94%</div>
+                            <div class="note" data-i18n="contact.basedOnCases">Based on similar cases we've handled</div>
+                        </div>
+
+                        <div class="form-checkboxes">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="consent_call" required>
+                                <span data-i18n="leadPopup.consentCall">I agree to receive a phone call for consultation</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="consent_data" required>
+                                <span><span data-i18n="leadPopup.consentData">I agree to the</span> <a href="privacy.html" target="_blank" style="color: var(--primary);" data-i18n="leadPopup.privacyLink">Privacy Policy</a> <span data-i18n="leadPopup.consentDataEnd">and data processing</span></span>
+                            </label>
+                        </div>
+
+                        <div class="unavailable-notice">
+                            <p data-i18n="leadPopup.unavailableNotice">Services temporarily unavailable for citizens of the following countries. We're working to resolve this:</p>
+                            <div class="unavailable-countries">
+                                <span class="country-item"><img src="flags/ua.svg" class="country-flag" alt="UA"> UA</span>
+                                <span class="country-item"><img src="flags/rs.svg" class="country-flag" alt="SRB"> SRB</span>
+                                <span class="country-item"><img src="flags/xk.svg" class="country-flag" alt="XK"> XK</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;" data-i18n="contact.submitBtn">Submit for Free Evaluation →</button>
+
+                    </form>
+                </div>
+                </div>
+
+                <!-- Parallax Shield -->
+                <div class="parallax-shield" id="parallaxShield">
+                    <img src="assets/shield/layer_1.webp" alt="" class="shield-layer">
+                    <img src="assets/shield/layer_2.webp" alt="" class="shield-layer">
+                    <img src="assets/shield/layer_3.webp" alt="" class="shield-layer">
+                    <img src="assets/shield/layer_4.webp" alt="" class="shield-layer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2><span data-i18n="services.title">Comprehensive</span> <span class="gradient-text" data-i18n="services.titleHighlight">Recovery Solutions</span></h2>
+                <p data-i18n="services.subtitle">We specialize in recovering funds from various types of cryptocurrency fraud and platform issues.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card exchange-card animate-on-scroll">
+                    <div class="service-icon">🔒</div>
+                    <h3 data-i18n="services.exchange.title">Exchange Recovery</h3>
+                    <p data-i18n="services.exchange.description">Lost access to your exchange account? Funds frozen or locked? We work with exchanges and regulators to restore your access and recover your assets.</p>
+                    <a href="#contact" class="service-link" data-i18n="services.learnMore">Learn More →</a>
+                </div>
+                <div class="service-card scam-card animate-on-scroll">
+                    <div class="service-icon">🛡️</div>
+                    <h3 data-i18n="services.scam.title">Scam Recovery</h3>
+                    <p data-i18n="services.scam.description">Fallen victim to a crypto scam? Our team traces transactions, identifies perpetrators, and works to recover your stolen funds through legal channels.</p>
+                    <a href="#contact" class="service-link" data-i18n="services.learnMore">Learn More →</a>
+                </div>
+                <div class="service-card forex-card animate-on-scroll">
+                    <div class="service-icon">💱</div>
+                    <h3 data-i18n="services.forex.title">Forex & Exchange Recovery</h3>
+                    <p data-i18n="services.forex.description">Victim of forex fraud or trapped funds in a collapsed exchange? We recover assets from unregulated brokers and navigate bankruptcy proceedings.</p>
+                    <a href="#contact" class="service-link" data-i18n="services.learnMore">Learn More →</a>
+                </div>
+                <div class="service-card broker-card animate-on-scroll">
+                    <div class="service-icon">⚖️</div>
+                    <h3 data-i18n="services.broker.title">Broker Recovery</h3>
+                    <p data-i18n="services.broker.description">Lost money to an unlicensed broker? Our team traces funds and works with regulators to recover assets from fraudulent brokerage schemes.</p>
+                    <a href="#contact" class="service-link" data-i18n="services.learnMore">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2><span data-i18n="howItWorks.title">How</span> <span class="gradient-text" data-i18n="howItWorks.titleHighlight">Recovery Works</span></h2>
+                <p data-i18n="howItWorks.subtitle">Our proven 4-step process maximizes your chances of successful recovery.</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <h3 data-i18n="howItWorks.step1.title">Free Consultation</h3>
+                    <p data-i18n="howItWorks.step1.description">Share your case details with us. We'll evaluate your situation and explain your options at no cost.</p>
+                </div>
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <h3 data-i18n="howItWorks.step2.title">Case Analysis</h3>
+                    <p data-i18n="howItWorks.step2.description">Our experts analyze transactions, trace funds, and build a comprehensive recovery strategy.</p>
+                </div>
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">3</div>
+                    <h3 data-i18n="howItWorks.step3.title">Recovery Action</h3>
+                    <p data-i18n="howItWorks.step3.description">We initiate recovery through exchanges, legal channels, and regulatory bodies worldwide.</p>
+                </div>
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">4</div>
+                    <h3 data-i18n="howItWorks.step4.title">Funds Returned</h3>
+                    <p data-i18n="howItWorks.step4.description">Recovered assets are transferred directly to your wallet. You only pay on success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2><span data-i18n="team.title">Meet the</span> <span class="gradient-text" data-i18n="team.titleHighlight">Experts</span></h2>
+                <p data-i18n="team.subtitle">Experienced professionals dedicated to recovering your assets.</p>
+            </div>
+
+            <div class="swiper team-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-photo">
+                                <img src="team/kris.webp" alt="Kris Marszalek">
+                            </div>
+                            <h4 data-i18n="team.kris.name">Kris Marszalek</h4>
+                            <div class="role" data-i18n="team.kris.role">CEO & Co-Founder</div>
+                            <p data-i18n="team.kris.bio">Visionary leader with 15+ years building global technology companies and fintech platforms.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-photo">
+                                <img src="team/rafael.png" alt="Rafael Melo">
+                            </div>
+                            <h4 data-i18n="team.rafael.name">Rafael Melo</h4>
+                            <div class="role" data-i18n="team.rafael.role">CFO & Co-Founder</div>
+                            <p data-i18n="team.rafael.bio">Financial strategist with expertise in corporate finance and regulatory compliance worldwide.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-photo">
+                                <img src="team/james.jpg" alt="James Mitchell">
+                            </div>
+                            <h4 data-i18n="team.james.name">James Mitchell</h4>
+                            <div class="role" data-i18n="team.james.role">Legal Director</div>
+                            <p data-i18n="team.james.bio">International finance lawyer specializing in crypto regulations across 30+ jurisdictions.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-photo">
+                                <img src="team/sarah.jpg" alt="Dr. Sarah Chen">
+                            </div>
+                            <h4 data-i18n="team.sarah.name">Dr. Sarah Chen</h4>
+                            <div class="role" data-i18n="team.sarah.role">Head of Blockchain Analysis</div>
+                            <p data-i18n="team.sarah.bio">PhD in Cryptography. Previously lead analyst at Chainalysis.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-photo">
+                                <img src="team/michael.jpg" alt="Michael Torres">
+                            </div>
+                            <h4 data-i18n="team.michael.name">Michael Torres</h4>
+                            <div class="role" data-i18n="team.michael.role">Senior Forensic Analyst</div>
+                            <p data-i18n="team.michael.bio">Expert in digital forensics with 10+ years tracing illicit cryptocurrency transactions.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-photo">
+                                <img src="team/emma.jpg" alt="Emma Williams">
+                            </div>
+                            <h4 data-i18n="team.emma.name">Emma Williams</h4>
+                            <div class="role" data-i18n="team.emma.role">Client Success Manager</div>
+                            <p data-i18n="team.emma.bio">Dedicated to keeping you informed every step of the recovery process.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination team-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="case-studies" id="case-studies">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2><span data-i18n="cases.title">Real</span> <span class="gradient-text" data-i18n="cases.titleHighlight">Recovery Stories</span></h2>
+                <p data-i18n="cases.subtitle">Detailed examples of how we've helped clients recover their assets.</p>
+            </div>
+
+            <div class="swiper cases-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="case-card">
+                            <div class="case-stats">
+                                <div class="case-stat">
+                                    <div class="case-stat-value">€340K</div>
+                                    <div class="case-stat-label" data-i18n="cases.recovered">Recovered</div>
+                                </div>
+                                <div class="case-stat">
+                                    <div class="case-stat-value">47</div>
+                                    <div class="case-stat-label" data-i18n="cases.days">Days</div>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <div class="case-tag" data-i18n="cases.case1.tag">Exchange Freeze</div>
+                                <h3 data-i18n="cases.case1.title">Binance Account Unlocked After Wrongful Suspension</h3>
+                                <p data-i18n="cases.case1.p1">A German client had their Binance account frozen with €312,000 in assets after a routine security review flagged legitimate transactions as suspicious. Despite multiple appeals, the exchange refused to unlock the funds.</p>
+                                <p data-i18n="cases.case1.p2">Our team prepared comprehensive documentation proving the legitimate source of funds, coordinated with Binance's compliance department through our industry contacts, and filed regulatory complaints with BaFin. The account was fully restored with all assets intact.</p>
+                                <div class="case-timeline">
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case1.timeline1">Case accepted</span></div>
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case1.timeline2">Documentation prepared</span></div>
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case1.timeline3">Compliance contacted</span></div>
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case1.timeline4">Funds released</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="case-card">
+                            <div class="case-stats">
+                                <div class="case-stat">
+                                    <div class="case-stat-value">€127K</div>
+                                    <div class="case-stat-label" data-i18n="cases.recovered">Recovered</div>
+                                </div>
+                                <div class="case-stat">
+                                    <div class="case-stat-value">89</div>
+                                    <div class="case-stat-label" data-i18n="cases.days">Days</div>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <div class="case-tag" data-i18n="cases.case2.tag">Investment Scam</div>
+                                <h3 data-i18n="cases.case2.title">Fake Trading Platform – Funds Traced and Recovered</h3>
+                                <p data-i18n="cases.case2.p1">A UK investor deposited £98,000 into what appeared to be a legitimate trading platform. After initial "profits," all withdrawal requests were denied. The platform eventually went offline.</p>
+                                <p data-i18n="cases.case2.p2">Using blockchain analysis, we traced the stolen funds through 23 wallets to a centralized exchange. We worked with law enforcement to freeze the assets and filed legal proceedings in Cyprus where the scammers operated. 85% of the original investment was recovered.</p>
+                                <div class="case-timeline">
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case2.timeline1">Blockchain traced</span></div>
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case2.timeline2">Exchange contacted</span></div>
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case2.timeline3">Legal action filed</span></div>
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case2.timeline4">85% recovered</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="case-card">
+                            <div class="case-stats">
+                                <div class="case-stat">
+                                    <div class="case-stat-value">€78K</div>
+                                    <div class="case-stat-label" data-i18n="cases.recovered">Recovered</div>
+                                </div>
+                                <div class="case-stat">
+                                    <div class="case-stat-value">21</div>
+                                    <div class="case-stat-label" data-i18n="cases.days">Days</div>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <div class="case-tag" data-i18n="cases.case3.tag">Withdrawal Block</div>
+                                <h3 data-i18n="cases.case3.title">KuCoin Bonus Lock – Terms Dispute Resolution</h3>
+                                <p data-i18n="cases.case3.p1">An Austrian trader's €78,000 balance was locked due to a bonus he didn't realize he accepted. The exchange demanded 50x trading volume before any withdrawal – an impossible €3.9 million in trades.</p>
+                                <p data-i18n="cases.case3.p2">We negotiated directly with KuCoin's legal team, demonstrating that the bonus terms weren't clearly disclosed. After presenting evidence of misleading UI practices, the exchange agreed to forfeit the bonus and release the original deposit in full.</p>
+                                <div class="case-timeline">
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case3.timeline1">Terms analyzed</span></div>
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case3.timeline2">Evidence gathered</span></div>
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case3.timeline3">Negotiation</span></div>
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case3.timeline4">Full release</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="case-card">
+                            <div class="case-stats">
+                                <div class="case-stat">
+                                    <div class="case-stat-value">€215K</div>
+                                    <div class="case-stat-label" data-i18n="cases.recovered">Recovered</div>
+                                </div>
+                                <div class="case-stat">
+                                    <div class="case-stat-value">63</div>
+                                    <div class="case-stat-label" data-i18n="cases.days">Days</div>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <div class="case-tag" data-i18n="cases.case4.tag">Forex Fraud</div>
+                                <h3 data-i18n="cases.case4.title">Cyprus Forex Broker – Unlicensed Platform Shutdown</h3>
+                                <p data-i18n="cases.case4.p1">A French investor lost €215,000 to an unlicensed forex broker operating from Cyprus. The platform manipulated trades and refused all withdrawal requests, claiming "bonus conditions" weren't met.</p>
+                                <p data-i18n="cases.case4.p2">We filed complaints with CySEC and coordinated with Cypriot authorities. Our legal team initiated civil proceedings and traced company assets. The broker's accounts were frozen and funds were recovered through court-ordered restitution.</p>
+                                <div class="case-timeline">
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case4.timeline1">Regulator notified</span></div>
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case4.timeline2">Assets traced</span></div>
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case4.timeline3">Legal action</span></div>
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case4.timeline4">Full recovery</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="case-card">
+                            <div class="case-stats">
+                                <div class="case-stat">
+                                    <div class="case-stat-value">€89K</div>
+                                    <div class="case-stat-label" data-i18n="cases.recovered">Recovered</div>
+                                </div>
+                                <div class="case-stat">
+                                    <div class="case-stat-value">35</div>
+                                    <div class="case-stat-label" data-i18n="cases.days">Days</div>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <div class="case-tag" data-i18n="cases.case5.tag">Romance Scam</div>
+                                <h3 data-i18n="cases.case5.title">Romance Scam OKX – Emotional Manipulation Recovery</h3>
+                                <p data-i18n="cases.case5.p1">A Dutch victim was manipulated through a dating app into investing €89,000 in what they believed was a legitimate crypto opportunity. The scammer used fake OKX interfaces to simulate trading gains.</p>
+                                <p data-i18n="cases.case5.p2">Our forensic team traced the funds through multiple wallets to an exchange where the scammer attempted to cash out. Working with OKX's fraud department and Dutch law enforcement, we froze the funds and initiated recovery proceedings.</p>
+                                <div class="case-timeline">
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case5.timeline1">Funds traced</span></div>
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case5.timeline2">Exchange cooperation</span></div>
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case5.timeline3">Assets frozen</span></div>
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case5.timeline4">Funds returned</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="case-card">
+                            <div class="case-stats">
+                                <div class="case-stat">
+                                    <div class="case-stat-value">€156K</div>
+                                    <div class="case-stat-label" data-i18n="cases.recovered">Recovered</div>
+                                </div>
+                                <div class="case-stat">
+                                    <div class="case-stat-value">112</div>
+                                    <div class="case-stat-label" data-i18n="cases.days">Days</div>
+                                </div>
+                            </div>
+                            <div class="case-content">
+                                <div class="case-tag" data-i18n="cases.case6.tag">Exchange Collapse</div>
+                                <h3 data-i18n="cases.case6.title">FTX Bankruptcy – Creditor Claims Navigation</h3>
+                                <p data-i18n="cases.case6.p1">A Swiss client had €156,000 trapped in FTX when the exchange collapsed. Navigating the complex bankruptcy proceedings seemed impossible without specialized legal knowledge.</p>
+                                <p data-i18n="cases.case6.p2">Our team filed priority creditor claims, gathered all necessary documentation, and worked with the bankruptcy trustees. We successfully advocated for our client's position in the creditor hierarchy, securing a significantly higher recovery rate than average creditors.</p>
+                                <div class="case-timeline">
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case6.timeline1">Claims filed</span></div>
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case6.timeline2">Documentation</span></div>
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case6.timeline3">Creditor advocacy</span></div>
+                                    <div class="timeline-item"><span>✓</span> <span data-i18n="cases.case6.timeline4">Priority payout</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination cases-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="certificates" id="certificates">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2><span data-i18n="certificates.title">Our</span> <span class="gradient-text" data-i18n="certificates.titleHighlight">Certifications</span></h2>
+                <p data-i18n="certificates.subtitle">Recognized excellence in cryptocurrency recovery services.</p>
+            </div>
+
+            <div class="certificates-grid">
+                <div class="certificate-card animate-on-scroll">
+                    <img src="certificates/cert1.png" alt="Best Asset Recovery Firm - EFCPA 2025">
+                </div>
+                <div class="certificate-card animate-on-scroll">
+                    <img src="certificates/cert2.png" alt="Excellence in Client Service - IDRC 2025">
+                </div>
+                <div class="certificate-card animate-on-scroll">
+                    <img src="certificates/cert3.png" alt="Top Rated Recovery Service - CCA 2025">
+                </div>
+                <div class="certificate-card animate-on-scroll">
+                    <img src="certificates/cert4.png" alt="ISO 27001 Certified - 2025">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2><span data-i18n="faq.title">Frequently Asked</span> <span class="gradient-text" data-i18n="faq.titleHighlight">Questions</span></h2>
+                <p data-i18n="faq.subtitle">Everything you need to know about our recovery services.</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span data-i18n="faq.q1.question">How do I know if my case is recoverable?</span>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q1.answer">Every case is unique. We offer free consultations to evaluate your situation. Factors include the type of fraud, time elapsed, amount involved, and available documentation. Our success rate is 94% for cases we accept.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span data-i18n="faq.q2.question">How long does the recovery process take?</span>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q2.answer">Recovery timelines vary based on complexity. Simple exchange issues may resolve in 2-4 weeks, while complex fraud cases can take 2-6 months. We keep you informed throughout the entire process.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span data-i18n="faq.q3.question">What are your fees?</span>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q3.answer">We operate on a "No Win, No Fee" basis. You only pay a success fee when we recover your funds. The initial consultation is completely free. Fee percentages are discussed transparently before we begin.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span data-i18n="faq.q4.question">What documents do I need?</span>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q4.answer">Typically we need: transaction records, communication with the platform/scammer, wallet addresses involved, any contracts or agreements, and proof of identity. We'll guide you through exactly what's needed for your case.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span data-i18n="faq.q5.question">Do you work internationally?</span>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.q5.answer">Yes, we operate globally. Our team has experience working with exchanges, regulators, and legal systems across Europe, North America, Asia, and beyond. Cryptocurrency fraud is borderless, and so is our recovery capability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contact Section -->
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2><span data-i18n="partners.title">Trusted</span> <span class="gradient-text" data-i18n="partners.titleHighlight">& Verified By</span></h2>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-badge">
+                    <img src="badges/ssl-badge.jpg" alt="SSL Secured" class="partner-logo">
+                    <div class="partner-badge-text">
+                        <strong data-i18n="partners.ssl.title">SSL Secured</strong>
+                        <small data-i18n="partners.ssl.subtitle">256-bit Encryption</small>
+                    </div>
+                </div>
+                <div class="partner-badge">
+                    <img src="badges/gdpr.jpg" alt="GDPR Compliant" class="partner-logo">
+                    <div class="partner-badge-text">
+                        <strong data-i18n="partners.gdpr.title">GDPR Compliant</strong>
+                        <small data-i18n="partners.gdpr.subtitle">Data Protection</small>
+                    </div>
+                </div>
+                <div class="partner-badge">
+                    <img src="badges/fca.jpg" alt="FCA Registered" class="partner-logo">
+                    <div class="partner-badge-text">
+                        <strong data-i18n="partners.fca.title">FCA Registered</strong>
+                        <small data-i18n="partners.fca.subtitle">UK Financial Authority</small>
+                    </div>
+                </div>
+                <div class="partner-badge">
+                    <img src="badges/chainalysis.jpg" alt="Chainalysis Partner" class="partner-logo">
+                    <div class="partner-badge-text">
+                        <strong data-i18n="partners.chainalysis.title">Chainalysis Partner</strong>
+                        <small data-i18n="partners.chainalysis.subtitle">Blockchain Intelligence</small>
+                    </div>
+                </div>
+                <div class="partner-badge">
+                    <img src="badges/trustpilot.jpg" alt="Trustpilot" class="partner-logo">
+                    <div class="partner-badge-text">
+                        <strong data-i18n="partners.trustpilot.title">Trustpilot</strong>
+                        <small data-i18n="partners.trustpilot.subtitle">4.8/5 Rating</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="crypto.com-logo.png" alt="Crypto.com Refund" class="logo-img">
+                        <span class="logo-text"><span class="logo-white">Crypto.com</span> | <span class="logo-gradient">Refund</span></span>
+                    </a>
+                    <p data-i18n="footer.description">Professional cryptocurrency recovery services. We help victims of crypto fraud and platform issues recover their digital assets through legal channels.</p>
+                </div>
+                <div class="footer-column">
+                    <h4 data-i18n="footer.servicesTitle">Services</h4>
+                    <ul>
+                        <li><a href="#services" data-i18n="footer.exchangeRecovery">Exchange Recovery</a></li>
+                        <li><a href="#services" data-i18n="footer.scamRecovery">Scam Recovery</a></li>
+                        <li><a href="#services" data-i18n="footer.legalSupport">Legal Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-i18n="footer.companyTitle">Company</h4>
+                    <ul>
+                        <li><a href="#team" data-i18n="footer.aboutUs">About Us</a></li>
+                        <li><a href="#how-it-works" data-i18n="footer.howItWorks">How It Works</a></li>
+                        <li><a href="#case-studies" data-i18n="footer.successStories">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-i18n="footer.contactTitle">Contact</h4>
+                    <ul>
+                        <li><a href="#">support@cryptorefund.com</a></li>
+                        <li><a href="#">+44 20 7946 0958</a></li>
+                        <li><a href="#" data-i18n="footer.liveChat">Live Chat 24/7</a></li>
+                        <li>71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">© 2025 CryptoRefund. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="agreement.html" data-i18n="footer.terms">Terms of Service</a>
+                    <a href="privacy.html#cookies" data-i18n="footer.cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Popup Lead Form Button -->
+    <div class="lead-popup-btn" onclick="openLeadPopup()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span data-i18n="getHelp">Get Help</span>
+    </div>
+
+    <!-- Popup Lead Form Overlay -->
+    <div class="lead-popup-overlay" id="leadPopup" onclick="closeLeadPopup(event)">
+        <div class="lead-popup-content" onclick="event.stopPropagation()">
+            <button class="lead-popup-close" onclick="closeLeadPopup()">&times;</button>
+            <h3 data-i18n="leadPopup.title">Free Consultation</h3>
+            <p class="popup-subtitle" data-i18n="leadPopup.subtitle">Submit your details and our recovery expert will contact you shortly.</p>
+            <form class="popup-contact-form" onsubmit="submitLeadPopup(event)">
+                <div class="form-group">
+                    <input type="text" name="name" data-i18n-placeholder="leadPopup.namePlaceholder" placeholder="Your Name" required>
+                </div>
+                <div class="form-group phone-input-group">
+                    <div class="phone-prefix">
+                        <span class="flag">🌍</span>
+                        <select name="phone_code" class="phone-code-select">
+                            <option value="+1">+1</option>
+                            <option value="+44">+44</option>
+                            <option value="+49">+49</option>
+                            <option value="+33">+33</option>
+                            <option value="+39">+39</option>
+                            <option value="+34">+34</option>
+                            <option value="+48">+48</option>
+                            <option value="+90">+90</option>
+                            <option value="+971">+971</option>
+                            <option value="+7">+7</option>
+                        </select>
+                    </div>
+                    <input type="tel" name="phone" data-i18n-placeholder="leadPopup.phonePlaceholder" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" data-i18n-placeholder="leadPopup.emailPlaceholder" placeholder="Email Address">
+                </div>
+                <div class="form-group">
+                    <select name="amount" class="amount-select">
+                        <option value="" data-i18n="leadPopup.amountPlaceholder">Estimated Loss Amount</option>
+                        <option value="under-10k" data-i18n="contact.under10k">Under €10,000</option>
+                        <option value="10k-50k" data-i18n="contact.10k50k">€10,000 - €50,000</option>
+                        <option value="50k-100k" data-i18n="contact.50k100k">€50,000 - €100,000</option>
+                        <option value="over-100k">Over €100,000</option>
+                    </select>
+                </div>
+
+                <div class="form-checkboxes">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="consent_call" required>
+                        <span data-i18n="leadPopup.consentCall">I agree to receive a phone call for consultation</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="consent_data" required>
+                        <span><span data-i18n="leadPopup.consentData">I agree to the</span> <a href="privacy.html" target="_blank" style="color: var(--primary);" data-i18n="leadPopup.privacyLink">Privacy Policy</a> <span data-i18n="leadPopup.consentDataEnd">and data processing</span></span>
+                    </label>
+                </div>
+
+                <div class="unavailable-notice">
+                    <p data-i18n="leadPopup.unavailableNotice">Services temporarily unavailable for citizens of the following countries. We're working to resolve this:</p>
+                    <div class="unavailable-countries">
+                        <span class="country-item"><img src="flags/ua.svg" class="country-flag" alt="UA"> UA</span>
+                        <span class="country-item"><img src="flags/rs.svg" class="country-flag" alt="SRB"> SRB</span>
+                        <span class="country-item"><img src="flags/xk.svg" class="country-flag" alt="XK"> XK</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large" style="width: 100%;" data-i18n="leadPopup.submitBtn">Request Free Consultation</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
