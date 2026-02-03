@@ -30,6 +30,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -584,6 +585,7 @@ nav a:hover::after {
 .cases-swiper {
     padding-bottom: 60px;
     position: relative;
+    overflow: hidden;
 }
 
 .swiper-pagination {
@@ -609,6 +611,13 @@ nav a:hover::after {
 .team-swiper .swiper-slide,
 .cases-swiper .swiper-slide {
     height: auto;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .cases-swiper .swiper-slide {
+        width: 100% !important;
+    }
 }
 
 .team-swiper .team-card {
@@ -681,13 +690,18 @@ nav a:hover::after {
 .service-icon {
     width: 64px;
     height: 64px;
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%);
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(99, 102, 241, 0.2) 100%);
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
     margin-bottom: 24px;
+}
+
+.service-icon svg {
+    width: 32px;
+    height: 32px;
+    color: var(--primary);
 }
 
 .service-card h3 {
@@ -1009,6 +1023,33 @@ nav a:hover::after {
     transition: all 0.3s ease;
 }
 
+/* Phone Input with Country Code */
+.phone-input-wrapper {
+    display: flex;
+    gap: 0;
+}
+
+.country-code-select {
+    width: 110px !important;
+    min-width: 110px;
+    flex-shrink: 0;
+    border-radius: 12px 0 0 12px !important;
+    border-right: none !important;
+    padding: 14px 12px !important;
+    font-size: 14px !important;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.phone-input-wrapper input {
+    flex: 1;
+    border-radius: 0 12px 12px 0 !important;
+}
+
 .form-group input,
 .form-group select {
     height: 52px;
@@ -1245,6 +1286,37 @@ footer {
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: flex;
+        z-index: 1001;
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Hero visual on top for mobile */
+    .hero-visual {
+        order: -1;
+        margin-bottom: 30px;
+    }
+
+    .hero-wrapper {
+        flex-direction: column;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
     }
 }
 
@@ -1260,7 +1332,7 @@ footer {
     bottom: 0;
     background: rgba(11, 20, 38, 0.98);
     backdrop-filter: blur(20px);
-    z-index: 999;
+    z-index: 1100;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1285,84 +1357,29 @@ footer {
 
 .mobile-nav-close {
     position: absolute;
-    top: 24px;
-    right: 24px;
-    font-size: 32px;
+    top: 16px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+    font-size: 28px;
     color: var(--text);
     cursor: pointer;
-    background: none;
-    border: none;
-}
-
-/* ============================================
-   COOKIE BANNER
-============================================ */
-.cookie-banner {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: var(--bg-card);
-    border-top: 1px solid var(--border);
-    padding: 20px 24px;
-    z-index: 1500;
-    animation: fadeInUp 0.4s ease;
-}
-
-.cookie-banner.active {
-    display: block;
-}
-
-.cookie-content {
-    max-width: 1200px;
-    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    z-index: 1101;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    flex-wrap: wrap;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
-.cookie-text {
-    flex: 1;
-    min-width: 300px;
-}
-
-.cookie-text p {
-    color: var(--text-secondary);
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.cookie-text a {
+.mobile-nav-close:hover,
+.mobile-nav-close:active {
     color: var(--primary);
-}
-
-.cookie-buttons {
-    display: flex;
-    gap: 12px;
-}
-
-.cookie-btn {
-    padding: 10px 24px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.cookie-btn-accept {
-    background: var(--gradient-primary);
-    border: none;
-    color: white;
-}
-
-.cookie-btn-decline {
-    background: transparent;
-    border: 1px solid var(--border);
-    color: var(--text);
+    background: rgba(0, 212, 255, 0.1);
+    border-color: var(--primary);
 }
 
 /* ============================================
@@ -1767,6 +1784,7 @@ footer {
     padding: 50px 0;
     background: transparent;
     position: relative;
+    overflow: hidden;
 }
 
 .case-card {
@@ -1874,11 +1892,46 @@ footer {
 @media (max-width: 768px) {
     .case-card {
         grid-template-columns: 1fr;
+        padding: 24px 20px;
+        gap: 24px;
     }
 
     .case-stats {
         flex-direction: row;
         justify-content: center;
+        gap: 12px;
+        order: -1;
+    }
+
+    .case-stat {
+        padding: 16px 20px;
+        flex: 1;
+    }
+
+    .case-stat-value {
+        font-size: 24px;
+    }
+
+    .case-stat-label {
+        font-size: 10px;
+    }
+
+    .case-content h3 {
+        font-size: 18px;
+    }
+
+    .case-content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .case-timeline {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .timeline-item {
+        font-size: 12px;
     }
 }
 
@@ -2069,9 +2122,19 @@ footer {
 
 @media (max-width: 768px) {
     .parallax-shield {
-        width: 280px;
-        height: 280px;
+        width: 160px;
+        height: 160px;
+        margin: 0 auto 20px;
     }
+
+    .cta-with-shield .parallax-shield {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.cta-with-shield {
+    overflow: hidden;
 }
 
 /* ============================================
@@ -2615,5 +2678,105 @@ footer {
 
     .lang-option .lang-name {
         font-size: 16px;
+    }
+}
+
+/* ============================================
+   SWIPE INDICATOR
+============================================ */
+.swipe-indicator {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.swipe-indicator svg {
+    width: 24px;
+    height: 24px;
+    animation: swipe-hint 1.5s ease-in-out infinite;
+}
+
+@keyframes swipe-hint {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+}
+
+@media (max-width: 768px) {
+    .swipe-indicator {
+        display: flex;
+    }
+}
+
+/* ============================================
+   SERVICES SWIPER (Mobile only)
+============================================ */
+.services-swiper {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .services .services-grid {
+        display: none;
+    }
+
+    .services-swiper {
+        display: block;
+        padding-bottom: 50px;
+    }
+
+    .services-swiper .service-card {
+        height: auto;
+        margin: 0;
+    }
+}
+
+/* ============================================
+   CERTIFICATES SWIPER (Mobile only)
+============================================ */
+.certificates-swiper {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .certificates .certificates-grid {
+        display: none;
+    }
+
+    .certificates-swiper {
+        display: block;
+        padding-bottom: 50px;
+        margin-top: 40px;
+    }
+
+    .certificates-swiper .certificate-card {
+        margin: 0;
+    }
+}
+
+/* ============================================
+   PARTNERS SWIPER (Mobile only)
+============================================ */
+.partners-swiper {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .partners .partners-grid {
+        display: none;
+    }
+
+    .partners-swiper {
+        display: block;
+        padding-bottom: 50px;
+    }
+
+    .partners-swiper .partner-badge {
+        margin: 0 auto;
+        width: fit-content;
     }
 }

@@ -40,7 +40,7 @@
     "emailPlaceholder": "john@example.com",
     "phone": "Phone Number",
     "phonePlaceholder": "+1 234 567 8900",
-    "estimatedLoss": "Estimated Loss",
+    "estimatedLoss": "Loss Amount",
     "selectRange": "Select range",
     "under10k": "Under €10,000",
     "10k50k": "€10,000 - €50,000",
@@ -228,7 +228,7 @@
   },
   "partners": {
     "title": "Trusted",
-    "titleHighlight": "& Verified By",
+    "titleHighlight": "Partners",
     "ssl": {
       "title": "SSL Secured",
       "subtitle": "256-bit Encryption"
@@ -264,7 +264,7 @@
     "contactLink": "Contact",
     "contactTitle": "Contact",
     "liveChat": "Live Chat 24/7",
-    "copyright": "© 2025 CryptoRefund. All rights reserved.",
+    "copyright": "© 2026 CryptoRefund. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "cookies": "Cookie Policy"
@@ -297,11 +297,196 @@
     "submitBtn": "Request Free Consultation"
   },
   "getHelp": "Get Help",
+  "swipe": "Swipe",
   "alerts": {
     "thankYou": "Thank you! Our team will contact you shortly."
   },
   "langModal": {
     "title": "Select Your Language",
     "titleRu": "Выберите язык"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "backToHome": "← Back to Home",
+    "consultation": "Consultation",
+    "popupTitle": "Leave a Request",
+    "popupSubtitle": "Leave a request and our manager will contact you shortly.",
+    "yourName": "Your Name",
+    "phone": "Phone",
+    "email": "E-mail",
+    "lossAmount": "Loss Amount",
+    "lossUnder10k": "Under €10,000",
+    "loss10k50k": "€10,000 - €50,000",
+    "loss50k100k": "€50,000 - €100,000",
+    "lossOver100k": "Over €100,000",
+    "consentCall": "I am ready to receive a phone call for consultation",
+    "consentLanguage": "I am ready to communicate in English",
+    "unavailableNotice": "Services temporarily unavailable for citizens of the following countries. We're working to resolve this:",
+    "submitBtn": "Submit Request",
+    "thankYou": "Thank you! We will contact you shortly.",
+    "section1": {
+      "title": "1. General Provisions",
+      "p1": "This personal data processing policy has been prepared in accordance with the requirements of the European Union law dated 25.05.2018 No. 679 \"General Data Protection Regulation\" (GDPR) and defines the procedure for processing personal data and measures for their protection.",
+      "p2": "1.1. The Operator's primary goal is to respect human rights and freedoms when processing their personal data.",
+      "p3": "1.2. This Policy applies to all information that the Operator receives about service users."
+    },
+    "section2": {
+      "title": "2. Basic Concepts",
+      "item1": "2.1. Automated processing – processing using computing technology.",
+      "item2": "2.2. Data blocking – temporary suspension of processing.",
+      "item3": "2.3. Service – a set of functional capabilities.",
+      "item4": "2.4. Content – informational materials.",
+      "item5": "2.5. Personal data – any information about the user.",
+      "item6": "2.6. User – any person using the service.",
+      "item7": "2.7. Data provision – disclosure to a specific person.",
+      "item8": "2.8. Data distribution – disclosure to an indefinite circle of persons."
+    },
+    "section3": {
+      "title": "3. Rights and Obligations of the Operator",
+      "rights": "3.1. The Operator has the right to:",
+      "right1": "receive accurate data;",
+      "right2": "process data without consent in cases provided by law;",
+      "right3": "determine data protection measures.",
+      "obligations": "3.2. The Operator is obliged to:",
+      "obligation1": "provide information to users;",
+      "obligation2": "process data in accordance with GDPR;",
+      "obligation3": "respond to inquiries;",
+      "obligation4": "ensure data protection;",
+      "obligation5": "cease processing upon achieving goals or upon request."
+    },
+    "section4": {
+      "title": "4. Rights and Obligations of Users",
+      "rights": "4.1. Users have the right to:",
+      "right1": "receive information about data;",
+      "right2": "request clarification or deletion of data;",
+      "right3": "give and withdraw consent to processing;",
+      "right4": "appeal the operator's actions.",
+      "obligation": "4.2. Users are obliged to provide accurate data and notify of any changes."
+    },
+    "section5": {
+      "title": "5. What Data is Processed",
+      "item1": "Name, surname, contact details (email, phone).",
+      "item2": "Anonymized data about actions (cookies, etc.).",
+      "item3": "Special categories of data are not processed, except in cases permitted by GDPR."
+    },
+    "section6": {
+      "title": "6. Data Processing Principles",
+      "item1": "Processing is lawful and fair.",
+      "item2": "Data is collected for specific purposes.",
+      "item3": "Minimization of data volume.",
+      "item4": "Storage until goals are achieved, after which data is deleted or anonymized."
+    },
+    "section7": {
+      "title": "7. Purposes of Data Processing",
+      "item1": "Informing users.",
+      "item2": "Conclusion and performance of contracts.",
+      "item3": "Providing access to services and materials.",
+      "item4": "Improving service quality."
+    },
+    "section8": {
+      "title": "8. Legal Basis for Data Processing",
+      "item1": "Contracts with users.",
+      "item2": "EU legislation (GDPR).",
+      "item3": "User consent."
+    },
+    "section9": {
+      "title": "9. Conditions of Data Processing",
+      "p1": "Processing is carried out with user consent or in cases provided by GDPR.",
+      "p2": "Data may be processed for contract performance, obligations, or protection of interests."
+    },
+    "section10": {
+      "title": "10. Procedure for Collection, Storage and Transfer of Data",
+      "item1": "Security is ensured and third-party access is excluded.",
+      "item2": "Data is not transferred without user consent, except in cases required by law.",
+      "item3": "The user can update data and withdraw consent.",
+      "item4": "Storage until goals are achieved or consent is withdrawn."
+    },
+    "section11": {
+      "title": "11. Operator Actions with Data",
+      "p1": "Collection, recording, systematization, storage, use, transfer, anonymization, blocking, deletion and destruction of data."
+    },
+    "section12": {
+      "title": "12. Cross-Border Data Transfer",
+      "p1": "Transfer outside the country only in compliance with rights protection or with user consent."
+    },
+    "section13": {
+      "title": "13. Confidentiality",
+      "p1": "The Operator and persons with access are obliged not to disclose data without user consent, unless otherwise provided by law."
+    },
+    "section14": {
+      "title": "14. Final Provisions",
+      "p1": "14.1. The user can receive clarifications on data processing issues.",
+      "p2": "14.2. This Policy is effective indefinitely and is published publicly."
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "backToHome": "← Back to Home",
+    "section1": {
+      "title": "1. General Provisions",
+      "p1": "These Terms of Service (\"Terms\") govern your use of the CryptoRefund website and services (\"Service\"). By using our Service, you agree to these Terms.",
+      "p2": "1.1. CryptoRefund provides cryptocurrency recovery consulting and assistance services.",
+      "p3": "1.2. These Terms constitute a legally binding agreement between you and CryptoRefund."
+    },
+    "section2": {
+      "title": "2. Service Description",
+      "p1": "2.1. We provide consulting services to help victims of cryptocurrency fraud and platform issues.",
+      "p2": "2.2. Our services include: case evaluation, blockchain analysis, communication with exchanges and regulators, and legal assistance coordination.",
+      "p3": "2.3. We do not guarantee the recovery of funds. Success depends on many factors including the nature of the case, available documentation, and cooperation of third parties."
+    },
+    "section3": {
+      "title": "3. User Obligations",
+      "item1": "Provide accurate and complete information about your case.",
+      "item2": "Supply all requested documentation in a timely manner.",
+      "item3": "Not provide false or misleading information.",
+      "item4": "Cooperate fully with our team throughout the recovery process.",
+      "item5": "Keep confidential any proprietary methods or information shared by us."
+    },
+    "section4": {
+      "title": "4. Fees and Payment",
+      "p1": "4.1. Initial consultation is provided free of charge.",
+      "p2": "4.2. We operate on a \"No Win, No Fee\" basis for most cases. You only pay a success fee when we recover your funds.",
+      "p3": "4.3. Fee percentages and payment terms are discussed and agreed upon before we begin work on your case.",
+      "p4": "4.4. All fees and costs will be clearly outlined in a written agreement."
+    },
+    "section5": {
+      "title": "5. Limitation of Liability",
+      "p1": "5.1. CryptoRefund provides services on an \"as is\" basis without warranties of any kind.",
+      "p2": "5.2. We are not liable for any indirect, incidental, or consequential damages arising from the use of our services.",
+      "p3": "5.3. Our total liability shall not exceed the fees paid by you for our services."
+    },
+    "section6": {
+      "title": "6. Confidentiality",
+      "p1": "6.1. We treat all client information as strictly confidential.",
+      "p2": "6.2. We will not disclose your information to third parties without your consent, except as required by law or necessary for the recovery process.",
+      "p3": "6.3. Our data handling practices are detailed in our Privacy Policy."
+    },
+    "section7": {
+      "title": "7. Intellectual Property",
+      "p1": "7.1. All content on this website, including text, graphics, logos, and software, is the property of CryptoRefund.",
+      "p2": "7.2. You may not reproduce, distribute, or create derivative works without our written permission."
+    },
+    "section8": {
+      "title": "8. Termination",
+      "p1": "8.1. Either party may terminate the service agreement with written notice.",
+      "p2": "8.2. Upon termination, any fees owed for work completed will become due.",
+      "p3": "8.3. Confidentiality obligations survive termination."
+    },
+    "section9": {
+      "title": "9. Dispute Resolution",
+      "p1": "9.1. Any disputes shall first be attempted to be resolved through good-faith negotiation.",
+      "p2": "9.2. If negotiation fails, disputes shall be resolved through binding arbitration in accordance with EU regulations.",
+      "p3": "9.3. These Terms are governed by the laws of the European Union."
+    },
+    "section10": {
+      "title": "10. Changes to Terms",
+      "p1": "10.1. We reserve the right to modify these Terms at any time.",
+      "p2": "10.2. Changes will be effective upon posting to our website.",
+      "p3": "10.3. Continued use of our Service after changes constitutes acceptance of the modified Terms."
+    },
+    "section11": {
+      "title": "11. Contact Information",
+      "p1": "For questions about these Terms, please contact us through our website or consultation form."
+    }
   }
 }

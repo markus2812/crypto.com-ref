@@ -12,23 +12,23 @@ window.addEventListener('scroll', () => {
 const parallaxShield = document.getElementById('parallaxShield');
 if (parallaxShield) {
     const layers = parallaxShield.querySelectorAll('.shield-layer');
-    
+
     // Scroll-based animation
     window.addEventListener('scroll', () => {
         const rect = parallaxShield.getBoundingClientRect();
         const windowHeight = window.innerHeight;
-        
+
         // Calculate how much of shield is visible (0 to 1)
         const visibleStart = windowHeight - rect.top;
         const visibleRange = windowHeight + rect.height;
         let progress = visibleStart / visibleRange;
         progress = Math.max(0, Math.min(1, progress));
-        
+
         // Spread layers based on scroll progress - diagonal
-        // When scrolling down (progress increases) - layers spread apart diagonally
-        // When scrolling up (progress decreases) - layers come together
-        const maxSpread = 60;
-        
+        // Reduce spread on mobile
+        const isMobile = window.innerWidth <= 768;
+        const maxSpread = isMobile ? 20 : 60;
+
         layers.forEach((layer, i) => {
             const offset = (i - 1.5) * maxSpread * progress;
             layer.style.transform = `translate(${offset}px, ${offset * 0.7}px)`;
@@ -82,51 +82,38 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 block: 'start'
             });
         }
-        // Close mobile nav if open
-        document.getElementById('mobileNav').classList.remove('active');
     });
 });
 
 // Mobile Menu
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const mobileNav = document.getElementById('mobileNav');
-const mobileNavClose = document.getElementById('mobileNavClose');
+
+// Function to close mobile nav (called from onclick)
+function closeMobileNav() {
+    mobileNav.classList.remove('active');
+    mobileMenuBtn.classList.remove('active');
+}
+
+// Make it globally available
+window.closeMobileNav = closeMobileNav;
 
 mobileMenuBtn.addEventListener('click', () => {
     mobileNav.classList.add('active');
+    mobileMenuBtn.classList.add('active');
 });
 
-mobileNavClose.addEventListener('click', () => {
-    mobileNav.classList.remove('active');
+// Close mobile menu when clicking on a link
+mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMobileNav);
 });
 
 
-// Cookie Banner
-const cookieBanner = document.getElementById('cookieBanner');
-const cookieAccept = document.getElementById('cookieAccept');
-const cookieDecline = document.getElementById('cookieDecline');
-const cookieConsent = localStorage.getItem('cookieConsent');
-
-if (!cookieConsent) {
-    setTimeout(() => {
-        cookieBanner.classList.add('active');
-    }, 2000);
-}
-
-cookieAccept.addEventListener('click', () => {
-    localStorage.setItem('cookieConsent', 'accepted');
-    cookieBanner.classList.remove('active');
-});
-
-cookieDecline.addEventListener('click', () => {
-    localStorage.setItem('cookieConsent', 'declined');
-    cookieBanner.classList.remove('active');
-});
 
 // Escape key closes modals
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        mobileNav.classList.remove('active');
+        closeMobileNav();
     }
 });
 
@@ -229,6 +216,39 @@ new Swiper('.cases-swiper', {
     loop: true,
     pagination: {
         el: '.cases-pagination',
+        clickable: true
+    }
+});
+
+// Services Swiper - Mobile only
+new Swiper('.services-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: true,
+    pagination: {
+        el: '.services-pagination',
+        clickable: true
+    }
+});
+
+// Certificates Swiper - Mobile only
+new Swiper('.certificates-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: true,
+    pagination: {
+        el: '.certificates-pagination',
+        clickable: true
+    }
+});
+
+// Partners Swiper - Mobile only
+new Swiper('.partners-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: true,
+    pagination: {
+        el: '.partners-pagination',
         clickable: true
     }
 });
